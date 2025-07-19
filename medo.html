@@ -2,22 +2,25 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <title>Redirect</title>
+  <title>جاري التحويل ...</title>
   <script>
     window.onload = function() {
+      // ياخد chatId من الرابط
       const params = new URLSearchParams(window.location.search);
-      const chatid = params.get('chatid');
+      const chatId = params.get('chatId');
 
-      if(chatid) {
-        // الرابط اللي هتوديه ليه
-        const targetURL = `https://Medo_Broblems.com/whattsapp?chatId=${chatid}`;
+      if (chatId) {
+        // 👇 هنا الرابط الجديد اللي هتوديه ليه
+        // مثلاً نفس الدومين مع ID في الآخر
+        const targetURL = `https://Medo.Broblems.com/whattsapp/${chatId}`;
         window.location.href = targetURL;
-      } 
+      } else {
+        document.body.innerHTML = "<h2>❌ مفيش chatId في الرابط</h2>";
       }
     };
   </script>
 </head>
 <body>
-  <h2>جاري التحويل ...</h2>
+  <h2>⏳ جاري تحويلك ...</h2>
 </body>
 </html>
