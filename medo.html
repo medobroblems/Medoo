@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirect</title>
+  <script>
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const chatid = params.get('chatid');
+
+      if(chatid) {
+        // الرابط اللي هتوديه ليه
+        const targetURL = `https://Medo_Broblems.com/whattsapp?chatId=${chatid}`;
+        window.location.href = targetURL;
+      } 
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2>جاري التحويل ...</h2>
+</body>
+</html>
